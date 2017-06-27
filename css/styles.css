@@ -15,10 +15,10 @@ body {
 
 .logo {
     position: absolute;
-    right: 0px;
-    width: 270px;
-    height: 45px;
-    margin-top: 7px;
+    right: 5px;
+    width: 213px;
+    height: 35px;
+    margin-top: 11px;
 }
 
 #search-bar > div > div > ul > li > a:hover {
@@ -118,7 +118,7 @@ input[type=button]:hover {
 }
 
 
-/*FOOTER---------------------------*/
+/*--------------FOOTER---------------*/
 
 footer {
     background-color: #222;

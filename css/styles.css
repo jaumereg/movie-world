@@ -1,16 +1,34 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 body {
+    margin-bottom: 40px;
     background: black;
+    overflow-x: hidden;
 }
 
 
-/* -------------------HEADER STYLE-----------------*/
+/* ---------------HEADER-----------------*/
 
-#search-bar > div > div {
-    margin-left: 25px;
+@media (max-width: 767px) {
+    .logo {
+        display: none;
+    }
+    .inner-addon i.glyphicon {
+        padding-top: 10px;
+    }
 }
 
 #search-bar {
     margin-bottom: 0;
+    border: none;
+    border-radius: 0px;
+}
+
+#search-bar.navbar-inverse {
+    background: rgba(255, 255, 255, 0.07);
 }
 
 .logo {
@@ -26,7 +44,7 @@ body {
 }
 
 form {
-    width: 500px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
@@ -35,43 +53,18 @@ form {
     margin: 3px;
 }
 
+.search-div li a {
+    padding-top: 18px;
+}
+
 .rounded {
-    border-radius: 15px;
-    -moz-border-radius: 15px;
-    -webkit-border-radius: 15px;
+    border-radius: 27px;
+    -moz-border-radius: 27px;
+    -webkit-border-radius: 27px;
 }
 
 input[type=text] {
     color: #bcbcbc;
-}
-
-input[type=button],
-input[type=button]:hover {
-    position: relative;
-    left: -6px;
-    border: 1px solid #adc5cf;
-    background: #e4f1f9;
-    /* Old browsers */
-    background: -moz-linear-gradient(top, #e4f1f9 0%, #d5e7f3 100%);
-    /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e4f1f9), color-stop(100%, #d5e7f3));
-    /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #e4f1f9 0%, #d5e7f3 100%);
-    /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #e4f1f9 0%, #d5e7f3 100%);
-    /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #e4f1f9 0%, #d5e7f3 100%);
-    /* IE10+ */
-    background: linear-gradient(top, #e4f1f9 0%, #d5e7f3 100%);
-    /* W3C */
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#e4f1f9', endColorstr='#d5e7f3', GradientType=0);
-    /* IE6-9 */
-    color: #7da2aa;
-    cursor: pointer;
-}
-
-.dark {
-    background: url('./images/dark_grey.jpg');
 }
 
 .dark input[type=text] {
@@ -84,9 +77,6 @@ input[type=button]:hover {
     position: relative;
 }
 
-
-/* style icon */
-
 .inner-addon .glyphicon {
     position: absolute;
     padding: 10px;
@@ -95,9 +85,6 @@ input[type=button]:hover {
     pointer-events: none;
 }
 
-
-/* align icon */
-
 .left-addon .glyphicon {
     left: 0px;
 }
@@ -105,9 +92,6 @@ input[type=button]:hover {
 .right-addon .glyphicon {
     right: 0px;
 }
-
-
-/* add padding  */
 
 .left-addon input {
     padding-left: 30px;
@@ -121,14 +105,12 @@ input[type=button]:hover {
 /*--------------FOOTER---------------*/
 
 footer {
-    background-color: #222;
-    margin-top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 35px;
+    background: rgba(255, 255, 255, 0.07);
     text-align: center;
     color: #CCC;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 footer p {
@@ -137,14 +119,68 @@ footer p {
     line-height: 100%;
 }
 
+footer .footer-name {
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+footer .footer-name span {
+    color: #FFBA00;
+}
+
+footer .author {
+    color: #FFBA00;
+    text-decoration: none;
+}
+
+footer a.author:hover {
+    color: white;
+    border-bottom: 1px solid white;
+}
+
 
 /* --------- HOME ---------- */
 
-.grid-home {
-    background-image: url('img/background-image3.png');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
+@media (min-width: 1920px) {
+    .container {
+        width: 1710px;
+    }
+}
+
+@media (min-width: 1600px) and (max-width: 1919px) {
+    .container {
+        width: 1430px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1599px) {
+    .container {
+        width: 1190px;
+    }
+}
+
+@media (min-width: 910px) and (max-width: 1199px) {
+    .container {
+        width: 870px;
+    }
+}
+
+@media (min-width: 607px) and (max-width: 909px) {
+    .container {
+        width: 590px;
+    }
+}
+
+@media (max-width: 606px) {
+    .grid-home ul {
+        justify-content: center;
+    }
+    .grid-home h1 {
+        text-align: center;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 .grid-home .posters {
@@ -153,7 +189,6 @@ footer p {
     display: inline-block;
     margin: 15px;
     justify-content: center;
-    /* align-items: stretch;*/
 }
 
 .grid-home ul {
@@ -161,6 +196,7 @@ footer p {
     flex-wrap: wrap;
     padding-bottom: 40px;
     margin-bottom: 0;
+    padding-left: 0;
 }
 
 .grid-home img {
@@ -168,18 +204,14 @@ footer p {
     transition: all .05s linear;
 }
 
-.grid-home .posters-container {
-    margin: 0 50px;
-}
-
-.grid-home .posters-container .title {
+.grid-home .container .title {
     margin: 10px 0 0 0;
     color: white;
     font-size: 16px;
     font-weight: bold;
 }
 
-.grid-home .posters-container .release-date {
+.grid-home .container .release-date {
     margin: 5px 0 0 0;
     color: white;
 }
@@ -192,13 +224,13 @@ footer p {
     width: 100%;
 }
 
-.grid-home .posters-container img:hover {
+.grid-home .container img:hover {
     transform: scale(1.025);
     border-color: #FFBA00;
 }
 
 .grid-home h1 {
-    margin: 0 0 10px 50px;
+    margin: 0 0 10px 0;
     color: #FFBA00;
     padding-top: 30px;
 }
@@ -208,8 +240,9 @@ footer p {
     font-weight: 100;
     letter-spacing: 1px;
     padding-top: 40px;
-    padding-left: 50px;
     margin-top: 0px;
+    padding: 40px 40px 0 40px;
+    text-align: center;
 }
 
 .glyphicon-star {
@@ -219,6 +252,30 @@ footer p {
 
 
 /* -------- DETAILS -------- */
+
+@media (min-width: 1920px) {
+    .details-page.details-content {
+        padding: 120px 0;
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+    .details-page.details-content {
+        padding: 90px 0;
+    }
+}
+
+@media (max-width: 991px) {
+    .details-page .img-container {
+        padding: 40px;
+    }
+    .details-page .left-content-container {
+        padding-right: 50px;
+    }
+    .details-page.details-content {
+        padding: 30px 0;
+    }
+}
 
 .details-page h2 {
     margin: 0 0 10px 50px;
@@ -233,11 +290,7 @@ footer p {
 }
 
 .details-page {
-    padding: 80px 0;
-    background-image: url('img/background-image4.png');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
+    padding: 50px 0;
 }
 
 .details-page .blank-space {
@@ -256,6 +309,10 @@ footer p {
 
 .details-page .right-content {
     padding-left: 60px;
+}
+
+.details-page .img-container {
+    padding-right: 40px;
 }
 
 .details-page .description {

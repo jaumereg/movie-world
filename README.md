@@ -9,7 +9,7 @@
 <a href="http://standardjs.com/"><img src="https://github.com/jaumereg/img-logos/blob/master/logos/js-standard-style.png"></a>
 
 
-# [Movie World](https://jaumereg.github.io/movie_world/)
+# [Movie World](https://jaumereg.github.io/movie-world/)
 
 This is a **cloned repository** from an old group project that I have decided to keep working on, the original repository is [here](https://github.com/lfernandezcall/movie_world).
 
